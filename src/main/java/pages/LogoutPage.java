@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 public class LogoutPage {
     WebDriver driver;
 
-    By welcomeMenu = By.id("welcome");
+    By gnbSettings = By.xpath("//li[contains(@class,'oxd-userdropdown')]");
     By logoutLink = By.linkText("Logout");
 
     public LogoutPage(WebDriver driver) {
@@ -14,13 +14,7 @@ public class LogoutPage {
     }
 
     public void logout() {
-        driver.findElement(welcomeMenu).click();
-        // Small sleep/wait might be needed here for menu to open
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        driver.findElement(gnbSettings).click();
         driver.findElement(logoutLink).click();
     }
 }

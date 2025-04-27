@@ -25,12 +25,12 @@ This project is a Selenium WebDriver + TestNG automation framework designed to a
 4. Update browser driver path if required.
 5. Run `testng.xml` or use `mvn clean test` command.
 
+## Reporting
+- This framework uses **Allure Reports** for beautiful, interactive test reporting.
+- After test execution, run `allure serve target/allure-results` to view the report.
+
 ## Future Improvements
 - Add Assertions for validations
 - Add Data-driven testing with Excel/CSV
-- Generate Test Reports (ExtentReports/Allure)
 - Add Jenkins CI/CD Pipeline Integration
 
----
-
-Happy Testing!
